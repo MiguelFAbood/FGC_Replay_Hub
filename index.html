@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGC Replay Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <h1 class="logo">FGC Replay Hub</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="versus-container">
+        <div class="filter-block">
+            <div class="custom-char-select" id="p1-selector">
+                <div class="selected-portrait" id="p1-active-portrait">
+                    <img src="portraits/any.png" alt="">
+                </div>
+                
+                <div class="portrait-dropdown hidden" id="p1-options">
+                    <div class="dropdown-item" data-char="">
+                        <img src="portraits/any.png" alt="">
+                        <span>Any</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Alex">
+                        <img src="portraits/alex.png" alt="Alex">
+                        <span>Alex</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Chun-Li">
+                        <img src="portraits/chun-li.png" alt="Chun-Li">
+                        <span>Chun-Li</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Dudley">
+                        <img src="portraits/dudley.png" alt="Dudley">
+                        <span>Dudley</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Elena">
+                        <img src="portraits/elena.png" alt="Elena">
+                        <span>Elena</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Gouki">
+                        <img src="portraits/akuma.png" alt="Gouki">
+                        <span>Gouki (Akuma)</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Hugo">
+                        <img src="portraits/hugo.png" alt="Hugo">
+                        <span>Hugo</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Ibuki">
+                        <img src="portraits/ibuki.png" alt="Ibuki">
+                        <span>Ibuki</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Ken">
+                        <img src="portraits/ken.png" alt="Ken">
+                        <span>Ken</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Makoto">
+                        <img src="portraits/makoto.png" alt="Makoto">
+                        <span>Makoto</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Necro">
+                        <img src="portraits/necro.png" alt="Necro">
+                        <span>Necro</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Oro">
+                        <img src="portraits/oro.png" alt="Oro">
+                        <span>Oro</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Q">
+                        <img src="portraits/Q.png" alt="Q">
+                        <span>Q</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Remy">
+                        <img src="portraits/remy.png" alt="Remy">
+                        <span>Remy</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Ryu">
+                        <img src="portraits/ryu.png" alt="Ryu">
+                        <span>Ryu</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Sean">
+                        <img src="portraits/sean.png" alt="Sean">
+                        <span>Sean</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Twelve">
+                        <img src="portraits/twelve.png" alt="Twelve">
+                        <span>Twelve</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Urien">
+                        <img src="portraits/urien.png" alt="Urien">
+                        <span>Urien</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Yang">
+                        <img src="portraits/yang.png" alt="Yang">
+                        <span>Yang</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Yun">
+                        <img src="portraits/yun.png" alt="Yun">
+                        <span>Yun</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-line">
+                <input type="text" id="p1-input" class="filter-input" placeholder="Player 1" aria-label="Search Player 1">
+            </div>
+        </div>
+
+        <h2 class="vs-text">VS</h2>
+
+        <div class="filter-block p2-block">
+            <div class="search-line">
+                <input type="text" id="p2-input" class="filter-input p2-input" placeholder="Player 2" aria-label="Search Player 2">
+            </div>
+
+            <div class="custom-char-select" id="p2-selector">
+                <div class="selected-portrait" id="p2-active-portrait">
+                    <img src="portraits/any.png" alt="">
+                </div>
+                <div class="portrait-dropdown hidden" id="p2-options">
+                    <div class="dropdown-item" data-char="">
+                        <img src="portraits/any.png" alt="">
+                        <span>Any</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Alex">
+                        <img src="portraits/alex.png" alt="Alex">
+                        <span>Alex</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Chun-Li">
+                        <img src="portraits/chun-li.png" alt="Chun-Li">
+                        <span>Chun-Li</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Dudley">
+                        <img src="portraits/dudley.png" alt="Dudley">
+                        <span>Dudley</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Elena">
+                        <img src="portraits/elena.png" alt="Elena">
+                        <span>Elena</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Gouki">
+                        <img src="portraits/akuma.png" alt="Gouki">
+                        <span>Gouki (Akuma)</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Hugo">
+                        <img src="portraits/hugo.png" alt="Hugo">
+                        <span>Hugo</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Ibuki">
+                        <img src="portraits/ibuki.png" alt="Ibuki">
+                        <span>Ibuki</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Ken">
+                        <img src="portraits/ken.png" alt="Ken">
+                        <span>Ken</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Makoto">
+                        <img src="portraits/makoto.png" alt="Makoto">
+                        <span>Makoto</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Necro">
+                        <img src="portraits/necro.png" alt="Necro">
+                        <span>Necro</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Oro">
+                        <img src="portraits/oro.png" alt="Oro">
+                        <span>Oro</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Q">
+                        <img src="portraits/Q.png" alt="Q">
+                        <span>Q</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Remy">
+                        <img src="portraits/remy.png" alt="Remy">
+                        <span>Remy</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Ryu">
+                        <img src="portraits/ryu.png" alt="Ryu">
+                        <span>Ryu</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Sean">
+                        <img src="portraits/sean.png" alt="Sean">
+                        <span>Sean</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Twelve">
+                        <img src="portraits/twelve.png" alt="Twelve">
+                        <span>Twelve</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Urien">
+                        <img src="portraits/urien.png" alt="Urien">
+                        <span>Urien</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Yang">
+                        <img src="portraits/yang.png" alt="Yang">
+                        <span>Yang</span>
+                    </div>
+                    <div class="dropdown-item" data-char="Yun">
+                        <img src="portraits/yun.png" alt="Yun">
+                        <span>Yun</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="video-results" class="results-grid"></section>
+    
+    <footer>
+        <i><p>Support your locals. Contact email: miguelabood@live.com</p></i>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
